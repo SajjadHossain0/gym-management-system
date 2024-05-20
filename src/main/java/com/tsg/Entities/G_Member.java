@@ -18,6 +18,8 @@ public class G_Member {
 	private int g_id;
 	
 	private String g_name;
+
+	private String g_email;
 	
 	private String g_number; 
 	
@@ -29,16 +31,14 @@ public class G_Member {
 		// TODO Auto-generated constructor stub
 	}
 
-	public G_Member(long id, int g_id, String g_name, String g_number, String g_admission_date) {
-		super();
+	public G_Member(long id, int g_id, String g_name, String g_email, String g_number, String g_admission_date) {
 		this.id = id;
 		this.g_id = g_id;
 		this.g_name = g_name;
+		this.g_email = g_email;
 		this.g_number = g_number;
 		this.g_admission_date = g_admission_date;
 	}
-
-
 
 	public long getId() {
 		return id;
@@ -62,6 +62,14 @@ public class G_Member {
 
 	public void setG_name(String g_name) {
 		this.g_name = g_name;
+	}
+
+	public String getG_email() {
+		return g_email;
+	}
+
+	public void setG_email(String g_email) {
+		this.g_email = g_email;
 	}
 
 	public String getG_number() {

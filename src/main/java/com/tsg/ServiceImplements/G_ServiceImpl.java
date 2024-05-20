@@ -32,8 +32,15 @@ public class G_ServiceImpl implements G_Service{
 		return g_Repository.save(g_Member);
 	}
 
+	@Override
+	public G_Member getGentsMemberById(long id) {
+		return g_Repository.findById(id).get();
+	}
 
-	
-	
+	@Override
+	public G_Member updategentsMember(G_Member g_member) {
+		return g_Repository.save(g_member);
+	}
+
 
 }

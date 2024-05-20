@@ -10,16 +10,10 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-light bg-light">
-		<div class="container-fluid">
-			<a class="navbar-brand">Third Space Gym</a>
-			<form th:action="@{/gents_member/search}" method="get" class="d-flex">
-				<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-success" type="submit">Search</button>
-			</form>
-		</div>
-	</nav>
 
+<footer th:replace="navbar::mainnavbar">
+	<!-- this is navbar-->
+</footer>
 
 	<div class="container">
 		<div>
@@ -49,6 +43,10 @@
 						<td th:text="${gentsmember.g_name}"></td>
 						<td th:text="${gentsmember.g_number}"></td>
 						<td th:text="${gentsmember.g_admission_date}"></td>
+						<td>
+							<a th:href="@{/gents_member/update/{id}(id=${gentsmember.id})}"
+							class="btn btn-outline-dark btn-sm">Update</a>
+						</td>
 					</tr>
 
 				</tbody>
