@@ -57,7 +57,7 @@ public class G_Controller {
     }
 
     @PostMapping("/gents_members/{id}")
-    public String updateMember(@PathVariable("id") Long id, @ModelAttribute("gents_members") G_Member g_member) {
+    public String updateMember(@PathVariable Long id, @ModelAttribute("gents_members") G_Member g_member) {
         G_Member currentMember = g_Service.getGentsMemberById(id);
         currentMember.setG_id(g_member.getG_id());
         currentMember.setG_name(g_member.getG_name());
@@ -66,6 +66,13 @@ public class G_Controller {
         currentMember.setG_admission_date(g_member.getG_admission_date());
 
         g_Service.updategentsMember(currentMember);
+        return "redirect:/homepage";
+    }
+
+    @GetMapping("/gents_member/{id}")
+    public String deleteMember(@PathVariable Long id) {
+
+        g_Service.deleteGentsMemberById(id);
         return "redirect:/homepage";
     }
 

@@ -42,5 +42,10 @@ public class G_ServiceImpl implements G_Service{
 		return g_Repository.save(g_member);
 	}
 
+	@Override
+	public void deleteGentsMemberById(Long id) {
+		g_Repository.deleteById(id);
+	}
+
 
 }

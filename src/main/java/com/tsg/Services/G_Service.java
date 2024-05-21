@@ -15,6 +15,8 @@ public interface G_Service {
 
 	G_Member updategentsMember(G_Member g_member);
 
+	void deleteGentsMemberById(Long id);
+
 
 	
 }

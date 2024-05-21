@@ -17,12 +17,12 @@
 
 	<div class="container">
 		<div>
-			<div class="row text-center">
+			<div class="row text-center mt-5">
 				<h1>Gents Member</h1>
 			</div>
 
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-3 mt-2">
 					<a th:href="@{/gents_member/add_new}" class="btn btn-primary btn-sm mb-3"> Add member</a>
 				</div>
 			</div>
@@ -45,7 +45,10 @@
 						<td th:text="${gentsmember.g_admission_date}"></td>
 						<td>
 							<a th:href="@{/gents_member/update/{id}(id=${gentsmember.id})}"
-							class="btn btn-outline-dark btn-sm">Update</a>
+							class="btn btn-outline-dark btn-sm mt-2">Update</a>
+
+							<a th:href="@{/gents_member/{id}(id=${gentsmember.id})}"
+							   class="btn btn-outline-danger btn-sm mt-2">Delete</a>
 						</td>
 					</tr>
 
