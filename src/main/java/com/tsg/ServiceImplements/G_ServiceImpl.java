@@ -33,7 +33,7 @@ public class G_ServiceImpl implements G_Service{
 	}
 
 	@Override
-	public G_Member getGentsMemberById(long id) {
+	public G_Member getGentsMemberById(Long id) {
 		return g_Repository.findById(id).get();
 	}
 

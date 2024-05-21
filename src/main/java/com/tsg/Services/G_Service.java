@@ -11,7 +11,7 @@ public interface G_Service {
 	
 	G_Member saveGentsMember(G_Member g_Member);
 
-	G_Member getGentsMemberById(long id);
+	G_Member getGentsMemberById(Long id);
 
 	G_Member updategentsMember(G_Member g_member);
 
