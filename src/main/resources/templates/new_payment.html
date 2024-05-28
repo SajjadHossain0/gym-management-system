@@ -18,14 +18,14 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8 col-sm-10 mt-5">
-            <h2 class="text-center">Add new gents member</h2>
+            <h2 class="text-center">Add new payment</h2>
             <div class="card-body">
-                <form th:action="@{/gents_members}" th:object="${addMemberForm}" method="POST">
+                <form th:action="@{/new_members_payments}" th:object="${newPaymentForm}" method="POST">
 
                     <div class="form-group">
 
                         <label>Member ID</label>
-                        <input type="number" name="g_id" th:value="*{gid}" class="form-control"
+                        <input type="number" name="gid" th:value="*{gid}" class="form-control"
                                placeholder="Enter member ID" required/>
                         <div id="dateError" style="color: red; display: none;">Please enter the admission date</div>
 
@@ -33,34 +33,29 @@
 
                     <div class="form-group">
                         <label>Member Name</label>
-                        <input type="text" name="g_name" th:field="*{gname}" class="form-control"
+                        <input type="text" name="gname" th:field="*{gname}" class="form-control"
                                placeholder=" Enter member name" required/>
                         <div id="dateError" style="color: red; display: none;">Please enter the admission date</div>
 
                     </div>
 
                     <div class="form-group">
-                        <label>Email address</label>
-                        <input type="email" name="g_email" th:field="*{gemail}" class="form-control"
-                               placeholder=" Enter E-mail address"/>
-
-                    </div>
-
-                    <div class="form-group">
-                        <label>Phone Number</label>
-                        <input type="text" name="g_number" th:field="*{gnumber}" class="form-control"
-                               placeholder=" Enter phone number" required/>
+                        <label>Amount</label>
+                        <input type="number" name="gamount" th:field="*{gamount}" class="form-control"
+                               placeholder=" Enter payment amount" required/>
                         <div id="dateError" style="color: red; display: none;">Please enter the admission date</div>
 
                     </div>
 
                     <div class="form-group">
-                        <label for="g_admission_date">Admission Date</label>
-                        <input type="date" id="g_admission_date" name="g_admission_date"
-                               th:field="*{gadmissiondate}" class="form-control"
-                               placeholder="Enter the admission date" required/>
+                        <label>Payment month</label>
+                        <input type="text" name="gpaymentmonth" th:field="*{gpaymentmonth}" class="form-control"
+                               placeholder=" Enter which month this payment belongs to..." required/>
                         <div id="dateError" style="color: red; display: none;">Please enter the admission date</div>
+
                     </div>
+
+
 
                     <div class="form-group">
                         <label></label>

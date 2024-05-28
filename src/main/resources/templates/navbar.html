@@ -5,24 +5,33 @@
     <title>Title</title>
 </head>
 <body>
+
 <footer th:fragment="mainnavbar">
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/homepage">Third Space Gym </a>
+            <a class="navbar-brand" href="/homepage">Third Space Gym</a>
+            <div class="d-flex me-auto">
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" aria-current="page" href="/homepage">Home</a>
+                    </li>
 
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/homepage">Home</a>
-                </li>
-            </ul>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" aria-current="page" href="#">Attendance</a>
+                    </li>
 
-            <form th:action="@{/gents_member/search}" method="get" class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" aria-current="page" href="/gents_member/payment">Payment</a>
+                    </li>
+
+                </ul>
+            </div>
         </div>
     </nav>
 </footer>
+
+
+
 
 </body>
 </html>

@@ -17,8 +17,21 @@
 
 	<div class="container">
 		<div>
+			<div class="row text-center mt-3">
+			<!--<form th:action="@{/gents_member/search}" method="get" class="d-flex">
+				<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success" type="submit">Search</button>
+			</form>-->
+				<input id="search-input" type="text" class="form-control" placeholder="Search members " />
+				<div class="search-result">
+
+
+
+				</div>
+			</div>
+
 			<div class="row text-center mt-5">
-				<h1>Gents Member</h1>
+				<h1>Gent's Members</h1>
 			</div>
 
 			<div class="row">
@@ -39,10 +52,10 @@
 				</thead>
 				<tbody>
 					<tr th:each="gentsmember: ${gents_Member}">
-						<td th:text="${gentsmember.g_id}"></td>
-						<td th:text="${gentsmember.g_name}"></td>
-						<td th:text="${gentsmember.g_number}"></td>
-						<td th:text="${gentsmember.g_admission_date}"></td>
+						<td th:text="${gentsmember.gid}"></td>
+						<td th:text="${gentsmember.gname}"></td>
+						<td th:text="${gentsmember.gnumber}"></td>
+						<td th:text="${gentsmember.gadmissiondate}"></td>
 						<td>
 							<a th:href="@{/gents_member/update/{id}(id=${gentsmember.id})}"
 							class="btn btn-outline-dark btn-sm mt-2">Update</a>

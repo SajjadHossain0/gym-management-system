@@ -28,11 +28,11 @@ public class G_updateMemberController {
     @PostMapping("/gents_members/{id}")
     public String updateMember(@PathVariable Long id, @ModelAttribute("gents_members") G_Member g_member) {
         G_Member currentMember = g_Service.getGentsMemberById(id);
-        currentMember.setG_id(g_member.getG_id());
-        currentMember.setG_name(g_member.getG_name());
-        currentMember.setG_email(g_member.getG_email());
-        currentMember.setG_number(g_member.getG_number());
-        currentMember.setG_admission_date(g_member.getG_admission_date());
+        currentMember.setGid(g_member.getGid());
+        currentMember.setGname(g_member.getGname());
+        currentMember.setGemail(g_member.getGemail());
+        currentMember.setGnumber(g_member.getGnumber());
+        currentMember.setGadmissiondate(g_member.getGadmissiondate());
 
         g_Service.updategentsMember(currentMember);
         return "redirect:/homepage";

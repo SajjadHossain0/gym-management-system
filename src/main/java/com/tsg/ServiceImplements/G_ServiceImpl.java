@@ -2,7 +2,7 @@ package com.tsg.ServiceImplements;
 
 import java.util.List;
 
-import org.springframework.data.domain.Sort;
+import com.tsg.Entities.G_memberPayment;
 import org.springframework.stereotype.Service;
 
 import com.tsg.Entities.G_Member;
@@ -27,6 +27,8 @@ public class G_ServiceImpl implements G_Service{
 	}
 
 
+
+
 	@Override
 	public G_Member saveGentsMember(G_Member g_Member) {
 		return g_Repository.save(g_Member);
@@ -47,5 +49,4 @@ public class G_ServiceImpl implements G_Service{
 		g_Repository.deleteById(id);
 	}
 
-
-}
+	}
