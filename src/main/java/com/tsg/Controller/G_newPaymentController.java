@@ -1,6 +1,5 @@
 package com.tsg.Controller;
 
-import com.tsg.Entities.G_Member;
 import com.tsg.Entities.G_memberPayment;
 import com.tsg.Services.G_paymentService;
 import org.springframework.stereotype.Controller;
@@ -28,20 +27,12 @@ public class G_newPaymentController {
         return "new_payment";
     }
 
-<<<<<<< HEAD
     @PostMapping("/new_members_payments")
-=======
-    @PostMapping("/new_payments")
->>>>>>> origin/master
     public String new_payment(@ModelAttribute("newPaymentForm") G_memberPayment g_memberPayment) {
 
         g_paymentService.saveGentsPayments(g_memberPayment);
 
-<<<<<<< HEAD
         return "redirect:/payment_list_page";
-=======
-        return "redirect:/payment_page";
->>>>>>> origin/master
 
     }
 
