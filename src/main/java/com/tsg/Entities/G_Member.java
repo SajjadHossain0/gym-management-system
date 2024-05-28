@@ -15,15 +15,15 @@ public class G_Member {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-	private int g_id;
+	private int gid;
 	
-	private String g_name;
+	private String gname;
 
-	private String g_email;
+	private String gemail;
 	
-	private String g_number; 
+	private String gnumber;
 	
-	private String g_admission_date;
+	private String gadmissiondate;
 	
 
 	public G_Member() {
@@ -31,13 +31,13 @@ public class G_Member {
 		// TODO Auto-generated constructor stub
 	}
 
-	public G_Member(long id, int g_id, String g_name, String g_email, String g_number, String g_admission_date) {
+	public G_Member(long id, int gid, String gname, String gemail, String gnumber, String gadmissiondate) {
 		this.id = id;
-		this.g_id = g_id;
-		this.g_name = g_name;
-		this.g_email = g_email;
-		this.g_number = g_number;
-		this.g_admission_date = g_admission_date;
+		this.gid = gid;
+		this.gname = gname;
+		this.gemail = gemail;
+		this.gnumber = gnumber;
+		this.gadmissiondate = gadmissiondate;
 	}
 
 	public long getId() {
@@ -48,44 +48,44 @@ public class G_Member {
 		this.id = id;
 	}
 
-	public int getG_id() {
-		return g_id;
+	public int getGid() {
+		return gid;
 	}
 
-	public void setG_id(int g_id) {
-		this.g_id = g_id;
+	public void setGid(int gid) {
+		this.gid = gid;
 	}
 
-	public String getG_name() {
-		return g_name;
+	public String getGname() {
+		return gname;
 	}
 
-	public void setG_name(String g_name) {
-		this.g_name = g_name;
+	public void setGname(String gname) {
+		this.gname = gname;
 	}
 
-	public String getG_email() {
-		return g_email;
+	public String getGemail() {
+		return gemail;
 	}
 
-	public void setG_email(String g_email) {
-		this.g_email = g_email;
+	public void setGemail(String gemail) {
+		this.gemail = gemail;
 	}
 
-	public String getG_number() {
-		return g_number;
+	public String getGnumber() {
+		return gnumber;
 	}
 
-	public void setG_number(String g_number) {
-		this.g_number = g_number;
+	public void setGnumber(String gnumber) {
+		this.gnumber = gnumber;
 	}
 
-	public String getG_admission_date() {
-		return g_admission_date;
+	public String getGadmissiondate() {
+		return gadmissiondate;
 	}
 
-	public void setG_admission_date(String g_admission_date) {
-		this.g_admission_date = g_admission_date;
+	public void setGadmissiondate(String gadmissiondate) {
+		this.gadmissiondate = gadmissiondate;
 	}
 	
 	

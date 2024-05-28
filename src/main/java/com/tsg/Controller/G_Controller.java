@@ -11,8 +11,6 @@ import com.tsg.Services.G_Service;
 
 @Controller
 public class G_Controller {
-
-
     private final G_Service g_Service;
 
 
@@ -29,15 +27,7 @@ public class G_Controller {
 
         return "home";
     }
-
-
-    @GetMapping("/gents_member/{id}")
-    public String deleteMember(@PathVariable Long id) {
-
-        g_Service.deleteGentsMemberById(id);
-        return "redirect:/homepage";
-    }
-
+ 
 
 
 }
