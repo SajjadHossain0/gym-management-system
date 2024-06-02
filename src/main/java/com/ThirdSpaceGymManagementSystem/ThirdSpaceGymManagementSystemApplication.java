@@ -21,24 +21,9 @@ import com.tsg.Repository.G_Repository;
 public class ThirdSpaceGymManagementSystemApplication{
 
 	public static void main(String[] args) {
+		
 		SpringApplication.run(ThirdSpaceGymManagementSystemApplication.class, args);
-//		
-//		G_Repository repository = context.getBean(G_Repository.class);
-//		
-//		G_Member g_Member = new G_Member();
-//		g_Member.setgId(1);
-//		g_Member.setGname("xyz");
-//		g_Member.setGnumber("0173808569");
-//		g_Member.setGadmissiondate("02.06.2023");
-//		G_Member g_Member2 = new G_Member(2,2,"abc","0123456","15/03/2024");
-//		
-		//repository.save(g_Member);
-		//repository.save(g_Member2);
-		
-		
-		
-		
-		
+
 	
 	}
 	
