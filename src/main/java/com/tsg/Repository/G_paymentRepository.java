@@ -1,7 +1,6 @@
 package com.tsg.Repository;
 
 
-import com.tsg.Entities.G_Member;
 import com.tsg.Entities.G_memberPayment;
 import org.springframework.data.jpa.repository.JpaRepository;
 

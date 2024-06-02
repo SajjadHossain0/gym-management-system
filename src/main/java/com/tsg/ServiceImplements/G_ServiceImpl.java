@@ -2,7 +2,6 @@ package com.tsg.ServiceImplements;
 
 import java.util.List;
 
-import com.tsg.Entities.G_memberPayment;
 import org.springframework.stereotype.Service;
 
 import com.tsg.Entities.G_Member;

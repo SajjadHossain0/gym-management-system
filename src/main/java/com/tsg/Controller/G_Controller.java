@@ -1,19 +1,15 @@
 package com.tsg.Controller;
 
 import java.util.List;
-
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
 import com.tsg.Entities.G_Member;
 import com.tsg.Services.G_Service;
 
 @Controller
 public class G_Controller {
     private final G_Service g_Service;
-
 
     public G_Controller(G_Service g_Service) {
         super();
@@ -37,6 +33,7 @@ public class G_Controller {
         model.addAttribute("gents_Member", searchResults);
         return "home";
     }
+
 
 
 }
