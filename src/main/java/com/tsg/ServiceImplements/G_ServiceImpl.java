@@ -3,6 +3,7 @@ package com.tsg.ServiceImplements;
 import java.util.List;
 
 import com.tsg.Entities.G_memberPayment;
+import com.tsg.Repository.G_paymentRepository;
 import org.springframework.stereotype.Service;
 
 import com.tsg.Entities.G_Member;
@@ -14,11 +15,13 @@ import com.tsg.Services.G_Service;
 public class G_ServiceImpl implements G_Service{
 	
 	private final G_Repository g_Repository;
+	private final G_paymentRepository g_paymentRepository;
 
-	public G_ServiceImpl(G_Repository g_Repository) {
+	public G_ServiceImpl(G_Repository g_Repository, G_paymentRepository gPaymentRepository) {
 		super();
 		this.g_Repository = g_Repository;
-	}
+        this.g_paymentRepository = gPaymentRepository;
+    }
 
 
 	@Override
@@ -57,6 +60,16 @@ public class G_ServiceImpl implements G_Service{
 		} catch (NumberFormatException e) {
 			return g_Repository.findByGidOrGnumber(-1, query);  // Passing -1 if query is not an integer
 		}
+	}
+
+	@Override
+	public G_memberPayment savePayment(G_memberPayment g_memberPayment) {
+		return g_paymentRepository.save(g_memberPayment);
+	}
+
+	@Override
+	public List<G_memberPayment> findByGpid(int gpid) {
+		return g_paymentRepository.findByGpid(gpid);
 	}
 
 }

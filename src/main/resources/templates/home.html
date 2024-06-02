@@ -46,11 +46,14 @@
 				</div>
 			</div>
 
+
+
 			<table class="table table-striped table-hover">
 				<thead>
 					<tr>
 						<th scope="col">Id</th>
 						<th scope="col">Name</th>
+						<th scope="col">E-mail</th>
 						<th scope="col">Phone Number</th>
 						<th scope="col">Admission Date</th>
 						<th scope="col">Action</th>
@@ -60,14 +63,19 @@
 					<tr th:each="gentsmember: ${gents_Member}">
 						<td th:text="${gentsmember.gid}"></td>
 						<td th:text="${gentsmember.gname}"></td>
+						<td th:text="${gentsmember.gemail}"></td>
 						<td th:text="${gentsmember.gnumber}"></td>
 						<td th:text="${gentsmember.gadmissiondate}"></td>
 						<td>
 							<a th:href="@{/gents_member/update/{id}(id=${gentsmember.id})}"
 							class="btn btn-outline-dark btn-sm mt-2">Update</a>
 
-							<a th:href="@{/gents_member/{id}(id=${gentsmember.id})}"
+							<!--<a th:href="@{/gents_member/{id}(id=${gentsmember.id})}"
 							   class="btn btn-outline-danger btn-sm mt-2" onclick="confirmDelete(event)">Delete</a>
+-->
+							<a th:href="@{/gents_member/{id}/payments(id=${gentsmember.id})}"
+							   class="btn btn-outline-info btn-sm mt-2">View Payments</a>
+
 						</td>
 					</tr>
 

@@ -35,7 +35,7 @@ public class G_updateMemberController {
         currentMember.setGadmissiondate(g_member.getGadmissiondate());
 
         g_Service.updategentsMember(currentMember);
-        return "redirect:/homepage";
+        return "redirect:/third-space-gym/homepage";
     }
 
 }

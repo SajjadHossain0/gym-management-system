@@ -32,7 +32,7 @@ public class G_addMemberController {
 
         g_Service.saveGentsMember(g_Member);
 
-        return "redirect:/homepage";
+        return "redirect:/third-space-gym/homepage";
 
     }
 

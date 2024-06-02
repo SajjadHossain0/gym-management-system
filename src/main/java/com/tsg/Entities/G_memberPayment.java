@@ -2,6 +2,8 @@ package com.tsg.Entities;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name = "gents_member_payment_info_table")
 public class G_memberPayment {
@@ -10,7 +12,7 @@ public class G_memberPayment {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long pid;
 
-	private int gid;
+	private int gpid;// this is the member id, marked as gpid cuz there is already a gid in member entity which refer member id
 
 	private String gname;
 
@@ -18,16 +20,24 @@ public class G_memberPayment {
 
 	private String gpaymentmonth;
 
-	public G_memberPayment() {
-		super();
-	}
+	private LocalDate gpaymentdate;
 
-	public G_memberPayment(long pid, int gid, String gname, int gamount, String gpaymentmonth) {
+	@ManyToOne
+	@JoinColumn(name = "g_member_id", nullable = false)
+	private G_Member gMember;
+
+	public G_memberPayment(long pid, int gpid, String gname, int gamount, String gpaymentmonth, LocalDate gpaymentdate, G_Member gMember) {
 		this.pid = pid;
-		this.gid = gid;
+		this.gpid = gpid;
 		this.gname = gname;
 		this.gamount = gamount;
 		this.gpaymentmonth = gpaymentmonth;
+		this.gpaymentdate = gpaymentdate;
+		this.gMember = gMember;
+	}
+
+	public G_memberPayment() {
+
 	}
 
 	public long getPid() {
@@ -38,12 +48,12 @@ public class G_memberPayment {
 		this.pid = pid;
 	}
 
-	public int getGid() {
-		return gid;
+	public int getGpid() {
+		return gpid;
 	}
 
-	public void setGid(int gid) {
-		this.gid = gid;
+	public void setGpid(int gpid) {
+		this.gpid = gpid;
 	}
 
 	public String getGname() {
@@ -68,5 +78,21 @@ public class G_memberPayment {
 
 	public void setGpaymentmonth(String gpaymentmonth) {
 		this.gpaymentmonth = gpaymentmonth;
+	}
+
+	public LocalDate getGpaymentdate() {
+		return gpaymentdate;
+	}
+
+	public void setGpaymentdate(LocalDate gpaymentdate) {
+		this.gpaymentdate = gpaymentdate;
+	}
+
+	public G_Member getgMember() {
+		return gMember;
+	}
+
+	public void setgMember(G_Member gMember) {
+		this.gMember = gMember;
 	}
 }

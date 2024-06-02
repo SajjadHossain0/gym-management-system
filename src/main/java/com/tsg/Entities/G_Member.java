@@ -24,6 +24,7 @@ public class G_Member {
 	private String gnumber;
 	
 	private String gadmissiondate;
+
 	
 
 	public G_Member() {

@@ -22,6 +22,6 @@ public class G_deleteMemberController {
     public String deleteMember(@PathVariable Long id) {
 
         g_Service.deleteGentsMemberById(id);
-        return "redirect:/homepage";
+        return "redirect:/third-space-gym/homepage";
     }
 }
