@@ -16,7 +16,10 @@ public interface G_Service {
 
 	void deleteGentsMemberById(Long id);
 
+	List<G_Member> searchMembers(String query);
 
 
-	
+
+
+
 }

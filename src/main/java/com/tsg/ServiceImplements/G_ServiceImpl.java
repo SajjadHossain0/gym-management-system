@@ -49,4 +49,14 @@ public class G_ServiceImpl implements G_Service{
 		g_Repository.deleteById(id);
 	}
 
+	@Override
+	public List<G_Member> searchMembers(String query) {
+		try {
+			int id = Integer.parseInt(query);
+			return g_Repository.findByGidOrGnumber(id, query);
+		} catch (NumberFormatException e) {
+			return g_Repository.findByGidOrGnumber(-1, query);  // Passing -1 if query is not an integer
+		}
 	}
+
+}

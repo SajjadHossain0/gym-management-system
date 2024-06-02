@@ -2,6 +2,7 @@ package com.tsg.Controller;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +28,15 @@ public class G_Controller {
 
         return "home";
     }
- 
+
+    // search
+
+    @GetMapping("/gents_member/search")
+    public String search(@RequestParam("query") String query, Model model) {
+        List<G_Member> searchResults = g_Service.searchMembers(query);
+        model.addAttribute("gents_Member", searchResults);
+        return "home";
+    }
 
 
 }
